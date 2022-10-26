@@ -1,0 +1,38 @@
+{{>partials/header}}
+
+<h2>Usuários do Banco de Dados</h2>
+
+{{#usuarios}}
+
+<li>{{name}} - {{age}}</li>
+
+{{/usuarios}}
+
+<hr/>
+<h2>Produtos</h2>
+<ul>
+    {{#products}}
+        {{>partials/productItem}}
+    {{/products}}
+</ul>
+
+<hr/>
+<h2>Produtos a partir de R$ 12</h2>
+<ul>
+    {{#expensives}}
+        {{>partials/productItem}}
+    {{/expensives}}
+</ul>
+
+<hr/>
+
+<ul>
+    {{#frasesDoDia}}
+        <li>{{.}}</li>
+    {{/frasesDoDia}}
+    {{^frasesDoDia}}
+        Não há frases motivacionais hoje.
+    {{/frasesDoDia}}
+</ul>
+
+{{>partials/footer}}
